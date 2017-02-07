@@ -5,7 +5,7 @@ import csv
 
 
 #connect to server
-server = MongoClient('localhost')
+server = MongoClient('homer.stuy.edu')
 #server = MongoClient('127.0.0.1')
 
 #open (or create) database
