@@ -5,8 +5,8 @@ import csv
 
 
 #connect to server
-server = MongoClient('homer.stuy.edu')
-#server = MongoClient('127.0.0.1')
+#server = MongoClient('homer.stuy.edu')
+server = MongoClient('127.0.0.1')
 
 #open (or create) database
 db = server.mydb
@@ -30,6 +30,8 @@ for student in peeps:
         if course['id'] == insertStudent['id']:
             grades.append( { 'code' : course['code'], 'mark' : course['mark'] } )
     insertStudent['courses'] = grades
+    courses_raw.seek(0)
+    next(courses)
 
     #put doc into students collection
     db.students.insert_one(insertStudent) 
