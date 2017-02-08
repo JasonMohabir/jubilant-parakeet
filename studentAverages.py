@@ -5,7 +5,7 @@ from pymongo import MongoClient
 server = MongoClient('127.0.0.1')
 
 #open (or create) database
-db = server.mydb
+db = server.MongoJerry
 
 def averages(studentID): 
 	doc = db.students.find_one({"id" : studentID});

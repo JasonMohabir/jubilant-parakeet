@@ -9,7 +9,7 @@ import csv
 server = MongoClient('127.0.0.1')
 
 #open (or create) database
-db = server.mydb
+db = server.MongoJerry
 
 
 peeps_raw = open("peeps.csv")
